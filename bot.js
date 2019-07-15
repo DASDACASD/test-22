@@ -20,7 +20,7 @@ client.on("message", async msg => { // event message
 	let men = msg.mentions.users.first() || msg.author; // the mention or the author
 	let prize =  msg.content.split(" ").slice(2).join(" ") // prize
 
-	if(msg.content.startsWith(prefix+"credit")) { // if the message content credits do 
+	if(msg.content.startsWith(prefix+"credits")) { // if the message content credits do 
 		if(!men || !men === undefined) return msg.channel.send("** :interrobang: | "+men.username+", I can't find "+men.username+"!**"); // undefind user
 		if(!prize) {
 		sql.get(`SELECT * FROM creditSysteme WHERE id = '${men.id}'`).then(res => { // select user from table
