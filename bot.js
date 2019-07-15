@@ -46,7 +46,7 @@ client.on("message", async msg => { // event message
 		}
 	} else if(msg.content.startsWith(prefix+"daily")) {  // if the message content daily do
 		let daily = 1; // 24h
-		let amount = Math.floor((Math.random() * 90000000000) + 1) // Money
+		let amount = Math.floor((Math.random() * 1000000) + 1) // Money
     let res = await sql.get(`SELECT * FROM creditSysteme WHERE id = '${msg.author.id}'`) // select from sql
 		if(!res) sql.run(`INSERT INTO creditSysteme VALUES ('${men.id}', 0, 0)`) // if !user create new col 
     let time = res.timeDaily; // select last daily
