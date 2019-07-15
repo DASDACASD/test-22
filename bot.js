@@ -1,11 +1,8 @@
+    
 const Discord = require('discord.js');
-const moment = require("moment");  
-const fs = require("fs");      
-const dateFormat = require('dateformat');
-const client = new Discord.Client(); 
-const Canvas = require("canvas"); 
-const prefix = "#"
-const id = JSON.parse(fs.readFileSync("./id/rank.json", "utf8"));
+const client = new Discord.Client();
+const prefix = '#' ;
+
 
 
 const sql = require('sqlite');
